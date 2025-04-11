@@ -5,7 +5,7 @@ JavaScript variables follow specific rules. Let’s understand them one by one w
 
 ---
 
-## 🧠 Rule 1: No Numbers at the Start
+## Rule 1: No Numbers at the Start
 **Invalid:**  
 ```javascript
 let 123name = "wrong"; // ❌ Cannot start with a number
@@ -18,7 +18,7 @@ let name123 = "correct"; // ✅ Starts with letter
 
 ---
 
-## 🧠 Rule 2: No Spaces Allowed
+## Rule 2: No Spaces Allowed
 **Invalid:**  
 ```javascript
 let first name = "invalid"; // ❌ Space not allowed
@@ -31,7 +31,7 @@ let first_name = "valid"; // ✅ Use underscore or camelCase
 
 ---
 
-## 🧠 Rule 3: No Reserved Keywords
+## Rule 3: No Reserved Keywords
 **Invalid:**  
 ```javascript
 let if = 5;       // ❌ 'if' is a keyword
@@ -40,7 +40,7 @@ let while = "loop"; // ❌ 'while' is also a keyword
 
 ---
 
-## 🧠 Rule 4: Only _ and $ Are Allowed as Special Characters
+## Rule 4: Only _ and $ Are Allowed as Special Characters
 **Valid Examples:**  
 ```javascript
 let _num1 = 10;
@@ -49,7 +49,7 @@ let $name = "Pawan";
 
 ---
 
-## 🧠 Rule 5: Use Meaningful Names
+## Rule 5: Use Meaningful Names
 **Valid but NOT clear:**  
 ```javascript
 let x = 5;
@@ -63,7 +63,7 @@ let total_price_after_tax = 150.75;
 
 ---
 
-## 🧠 Rule 6: JavaScript is Case-Sensitive
+## Rule 6: JavaScript is Case-Sensitive
 ```javascript
 let num = 10;
 let Num = 20;
@@ -75,7 +75,7 @@ console.log(Num); // 20
 
 ---
 
-## 📦 let and Block Scope Example
+## let and Block Scope Example
 
 ```javascript
 let x1 = 12;
@@ -90,7 +90,7 @@ console.log("Outside block x1:", x1); // 12
 
 ---
 
-## ✅ Note:
+## Note:
 - Don’t start variable names with a number.
 - Don’t use spaces – use _ or camelCase.
 - Don’t use reserved keywords like `if`, `for`, `while`.

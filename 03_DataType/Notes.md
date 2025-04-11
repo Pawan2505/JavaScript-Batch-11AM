@@ -14,7 +14,7 @@
 
 --------------------------------------------
 
-📌 Variable Declaration Keywords
+Variable Declaration Keywords
 
 1. var
 2. let
