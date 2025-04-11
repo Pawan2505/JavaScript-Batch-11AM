@@ -1,142 +1,122 @@
-👨‍🏫 Data Types & Variables
---------------------------------------------
+### 🧠 JavaScript: Data Types & Variables
 
-✍️ JavaScript supports 8 primitive data types:
+---
 
-1. String        -> e.g.  "Hello", 'JS'
-2. Number        -> e.g.  10, 3.14, -7
-3. BigInt        -> e.g.  12345678901234567890n
-4. Boolean       -> true / false
-5. Undefined     -> declared but not assigned
-6. Null          -> special empty value
-7. Symbol        -> unique & immutable value
-8. Object        -> Arrays, Functions, etc. (non-primitive)
+## 🔸 Primitive Data Types (8 Types)
 
---------------------------------------------
+| Data Type   | Example                         | Description                           |
+|-------------|----------------------------------|---------------------------------------|
+| **String**  | `"Hello"`, `'JS'`               | Textual data                          |
+| **Number**  | `10`, `3.14`, `-7`              | Integer or floating point             |
+| **BigInt**  | `12345678901234567890n`         | Large integers                        |
+| **Boolean** | `true`, `false`                 | Logical values                        |
+| **Undefined**| `let x;`                       | Declared but not assigned             |
+| **Null**    | `let x = null;`                 | Intentional empty value               |
+| **Symbol**  | `Symbol("id")`                  | Unique, immutable identifiers         |
+| **Object**  | Arrays, Functions, etc.         | Non-primitive collection types        |
 
-Variable Declaration Keywords
+---
 
-1. var
-2. let
-3. const
+## 🔸 Variable Declaration Keywords
 
---------------------------------------------
+| Keyword | Scope         | Reassign | Redeclare | Notes                     |
+|---------|---------------|----------|-----------|---------------------------|
+| `var`   | Function/Global | ✅       | ✅         | Avoid for modern code     |
+| `let`   | Block           | ✅       | ❌         | Use for changeable values |
+| `const` | Block           | ❌       | ❌         | Use for constants         |
 
-🔹 var
-- Function/Global Scoped
-- Redeclaration allowed
-- Poor security – avoid if possible
+---
 
-Example:
+## 🔹 `var` Example
 
-   var name = "Utkarsh";
-   var name = "Raj";     // OK
-   console.log(name);    // Raj
+```javascript
+var name = "Utkarsh";
+var name = "Raj";       // Redeclaration is allowed
+console.log(name);      // Output: Raj
 
-   {
-     var a = 10;
-   }
+{
+  var a = 10;
+}
+console.log(a);         // Output: 10 (accessible outside block)
+```
 
-   console.log(a);       // 10 (accessible outside block)
+---
 
---------------------------------------------
+## 🔹 `let` Example
 
-🔹 let
-- Block Scoped ({} ke andar hi kaam karta hai)
-- Reassignment allowed
-- Redeclaration NOT allowed in same scope
+```javascript
+let age = 25;
+age = 30;               // ✅ Reassignment allowed
+// let age = 40;        // ❌ Redeclaration not allowed in same scope
 
-Example:
+{
+  let age = 50;
+  console.log(age);     // Output: 50 (inside block)
+}
+console.log(age);       // Output: 30 (outside block)
+```
 
-   let age = 25;
-   age = 30;             // ✅ allowed
-   let age = 40;         // ❌ not allowed in same block
+---
 
-   {
-     let age = 50;
-     console.log(age);   // 50
-   }
+## 🔹 `const` Example
 
-   console.log(age);     // 30
+```javascript
+const PI = 3.14;
+// PI = 3.1415;         // ❌ Error: can't reassign
+// const PI;            // ❌ Error: must assign at declaration
 
---------------------------------------------
+{
+  const roll = 101;
+  console.log(roll);    // Output: 101
+}
+console.log(roll);      // ❌ Error: not accessible outside block
+```
 
-🔹 const
-- Block Scoped
-- Must assign value at declaration
-- Reassignment ❌
-- Redeclaration ❌
+---
 
-Example:
+## 🔸 Getting User Input
 
-   const PI = 3.14;
-   PI = 3.1415;          // ❌ error
+```javascript
+let n = parseInt(prompt("Enter number:"));
+console.log(n);
+console.log(typeof n);
+```
 
-   const PI;             // ❌ not allowed
+---
 
-   {
-     const roll = 101;
-     console.log(roll);
-   }
+## 🔸 `typeof` Operator Examples
 
-   console.log(roll);    // ❌ error (block scoped)
+```javascript
+let name = "Pawan";         // "string"
+let age = 25;               // "number"
+let isHere = true;          // "boolean"
+let big = 1234567890n;      // "bigint"
+let x;                      // "undefined"
+let y = null;               // "object" (JavaScript bug)
+let sym = Symbol("id");     // "symbol"
+let arr = [1, 2, "three"];  // "object"
+```
 
---------------------------------------------
+---
 
-📥 User Input using prompt()
+## 🔁 Array `forEach()` Loop
 
-   let n = parseInt(prompt("Enter number:"));
-   console.log(n);
-   console.log(typeof n);
+```javascript
+let nums = [10, 20, 30];
 
---------------------------------------------
+nums.forEach((val, index) => {
+  console.log(index, val);
+});
+```
 
-📌 typeof Operator
+---
 
-   let name = "Pawan";
-   typeof name     // "string"
+## 📝 Important Tips
 
-   let age = 25;
-   typeof age      // "number"
-
-   let isHere = true;
-   typeof isHere   // "boolean"
-
-   let big = 1234567890n;
-   typeof big      // "bigint"
-
-   let x;
-   typeof x        // "undefined"
-
-   let y = null;
-   typeof y        // "object" (bug in JS)
-
-   let sym = Symbol("id");
-   typeof sym      // "symbol"
-
-   let arr = [1, 2, "three"];
-   typeof arr      // "object"
-
---------------------------------------------
-
-🔁 Array forEach loop
-
-   let nums = [10, 20, 30];
-
-   nums.forEach((val, index) => {
-     console.log(index, val);
-   });
-
---------------------------------------------
-
-📝 Important Note:
-
-- Use `let` for most variables
-- Use `const` for constants (non-changeable values)
-- Avoid `var` unless required for legacy code
-- Always check data type using `typeof`
-- Arrays and objects are non-primitive types
-- Use `prompt()` to take user input from browser
-
---------------------------------------------
+- Use `let` for most variable declarations.
+- Use `const` when value should not change.
+- Avoid `var` unless necessary for old code.
+- Check data type using `typeof`.
+- Arrays and objects are non-primitive types.
+- Use `prompt()` to take input from the user in browser.
 
