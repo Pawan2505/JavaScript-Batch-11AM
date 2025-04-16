@@ -1,8 +1,8 @@
 // var data = "Red";
-// var data = "White"; 
+// var data = "White";
 
 // let info = "A";
-// let info = "B"; 
+// let info = "B";
 
 // const fixed = "Skill";
-// const fixed = "India"; 
+// const fixed = "India";

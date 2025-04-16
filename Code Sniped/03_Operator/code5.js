@@ -7,4 +7,4 @@ let b = "10";
 console.log(+b); 
 
 let c = "abc";
-console.log(+c); 
+console.log(+c);
