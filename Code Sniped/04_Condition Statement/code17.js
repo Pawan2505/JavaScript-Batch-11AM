@@ -1,5 +1,5 @@
 let balance = 5000;
-let withdraw = 6000;
+let withdraw = 4000;
 
 if (withdraw <= 0) {
   console.log("Enter a valid amount");

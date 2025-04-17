@@ -1,4 +1,4 @@
-let num = 50;
+let num = 49;
 
 if (Math.sqrt(num) % 1 === 0) {
   console.log("Perfect Square");
