@@ -43,3 +43,45 @@
 
 
 // console.log(sum)
+
+// Prime Number
+
+// let num = 15;
+// let count = 0;
+
+// for (let i = 1; i <= num; i++){
+//     if (num % i == 0) {
+//         ++count;
+//     }
+// }
+
+
+// if (count == 2) {
+//     console.log("Prime Number")
+// } else {
+//     console.log("Not Prime Number");
+// }
+
+// prime number -> number
+
+// let start = 50;
+// let end = 100;
+
+// for (let num = start; num <= end; num++){
+//     let count = 0;
+//   for (let i = 1; i <= num; i++) {
+//       if (num % i == 0) {
+        
+//       ++count;
+//     }
+//   }
+
+// //   console.log(count)
+
+//   if (count == 2) {
+//     console.log(num);
+//   }
+// }
+
+
+
