@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Blue Sky';
+    src: url('BlueSkyRegular.woff2') format('woff2'),
+        url('BlueSkyRegular.woff') format('woff'),
+        url('BlueSkyRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
